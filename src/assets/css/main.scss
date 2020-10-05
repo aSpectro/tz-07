@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+@import './_variables';
+@import './_form';
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: $primary-font;
+}
+
+html, body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f0ff;
+}
+
+#app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+
+  #modal{
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .modal__content{
+      width: 100%;
+      max-width: 800px;
+      box-sizing: border-box;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 0 15px rgba($color: #000000, $alpha: .2);
+      font-size: 20px;
+      color: $font-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .modal__close{
+        cursor: pointer;
+      }
+    }
+  }
+}
