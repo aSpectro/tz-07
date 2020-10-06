@@ -69,12 +69,12 @@
             .field__msg {{ formFields.deliveryDate.msg }}
           .formBody__field
           .formBody__field.fullWidth(:class="{ warn: formFields.comment.status === 'warn', danger: formFields.comment.status === 'danger' }")
-            .field__label Адрес
+            .field__label Комментарий
             textarea.field__input(v-model="formFields.comment.value" placeholder="Ваш комментарий здесь...")
             .field__msg {{ formFields.comment.msg }}
         template(v-if="deliveryMode === 'pickup'")
           .formBody__field.fullWidth(:class="{ warn: formFields.comment.status === 'warn', danger: formFields.comment.status === 'danger' }")
-              .field__label Адрес
+              .field__label Комментарий
               textarea.field__input(v-model="formFields.comment.value" placeholder="Ваш комментарий здесь...")
               .field__msg {{ formFields.comment.msg }}
         .formBody__field
